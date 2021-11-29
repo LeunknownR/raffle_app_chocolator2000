@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500&display=swap');
+/* 
+AMARILLO 1 - #ffff00
+
+AMARILLO 2 - #ffff56
+
+AMARILLO 3 - #ffff81
+
+ANARANJADO 1 - #ff961e
+
+MARRÓN 1 - #8d4925
+
+MARRÓN 2 - #b16c47
+
+OSCURO 1 - #2c2c2c
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Asap', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #656565;
+    border-radius: 5px;
+}
+*::-webkit-scrollbar-track {
+    background-color: #252525;
+    width: 10px;
+    height: 10px;
+}
+*::-webkit-scrollbar-corner {
+    background-color: #252525;
+}

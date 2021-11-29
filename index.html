@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Manuel Rivera Becerra" />
+		<!-- CSS -->
+		<link rel="stylesheet" href="./public/styles/customize.css">
+		<link rel="stylesheet" href="./public/styles/normalize.css">
+		<link rel="stylesheet" href="./public/styles/index.css">
+		<title>Chocolator2000</title>
+	</head>
+	<body>
+		<header id="header-main">
+			<div class="title">
+				<span class="iconify" data-icon="mdi:arrange-bring-to-front"></span>
+				<h1>Chocolator2000</h1>
+			</div>
+		</header>
+		<main>
+			<article id="container-sections-relation">
+				<section class="section-relation">
+					<header class="description">
+						<h3>Agrega la primera relación</h3>
+						<button class="btn-add-member">
+							<span class="iconify" data-icon="carbon:add-filled"></span>
+						</button>
+					</header>
+					<article class="container">
+						<div class="member-item">
+							<span>Manuel Rivera</span>
+							<button class="close">x</button>
+						</div>
+					</article>
+				</section>
+				<section class="section-relation">
+					<header class="description">
+						<h3>Agrega la segunda relación</h3>
+						<button class="btn-add-member second">
+							<span class="iconify" data-icon="carbon:add-filled"></span>
+						</button>
+					</header>
+					<article class="container">
+						<div class="member-item second">
+							<span>Línea de tiempo</span>
+							<button class="close">x</button>
+						</div>
+					</article>
+				</section>
+			</article>
+			<button id="btn-raffle">
+				<span>Sortear</span>
+				<span 
+					class="iconify" 
+					data-icon="bi:arrow-down-circle-fill"></span>
+			</button>
+		</main>
+		<section id="container-results">
+			<div class="member-item-relation-1-result">
+				<span>Manuel Rivera</span>
+			</div>
+			<div class="member-item-relation-2-result">
+				<span>Línea de tiempo</span>
+			</div>
+		</section>
+		<footer id="footer-main">
+			<h5>© Desarrollado por Leunknown</h5>
+		</footer>
+		<!-- Scripts here -->
+		<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+		<script type="module" src="./public/scripts/index.js"></script>
+	</body>
+</html>
