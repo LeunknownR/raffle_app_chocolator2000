@@ -19,10 +19,12 @@ OSCURO 1 - #2c2c2c
     box-sizing: border-box;
     font-family: 'Asap', sans-serif;
 }
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 100vh;
 }
 
 /* Scrollbar */
@@ -31,14 +33,14 @@ body {
     height: 15px;
 }
 *::-webkit-scrollbar-thumb {
-    background-color: #656565;
+    background-color: #252525;
     border-radius: 5px;
 }
 *::-webkit-scrollbar-track {
-    background-color: #252525;
+    background-color: transparent;
     width: 10px;
     height: 10px;
 }
 *::-webkit-scrollbar-corner {
-    background-color: #252525;
+    background-color: transparent;
 }

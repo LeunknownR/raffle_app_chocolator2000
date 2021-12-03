@@ -8,63 +8,95 @@
 		<link rel="stylesheet" href="./public/styles/customize.css">
 		<link rel="stylesheet" href="./public/styles/normalize.css">
 		<link rel="stylesheet" href="./public/styles/index.css">
+		<!-- Icons -->
+		<link rel="shortcut icon" href="./public/img/icon.svg" type="image/x-icon">
 		<title>Chocolator2000</title>
 	</head>
 	<body>
 		<header id="header-main">
 			<div class="title">
-				<span class="iconify" data-icon="mdi:arrange-bring-to-front"></span>
-				<h1>Chocolator2000</h1>
+				<span class="iconify" data-icon="twemoji:chocolate-bar"></span>			<h1>Chocolator2000</h1>
 			</div>
 		</header>
 		<main>
-			<article id="container-sections-relation">
-				<section class="section-relation">
-					<header class="description">
-						<h3>Agrega la primera relación</h3>
-						<button class="btn-add-member">
-							<span class="iconify" data-icon="carbon:add-filled"></span>
-						</button>
-					</header>
-					<article class="container">
-						<div class="member-item">
-							<span>Manuel Rivera</span>
-							<button class="close">x</button>
-						</div>
+			<section class="section-content active visible" id="section-add-relations">
+				<article id="container-sections-relation">
+					<section class="section-relation">
+						<header class="description">
+							<div class="part1">
+								<h3>Agrega la primera relación</h3>
+								<button class="btn-add-member">
+									<span class="iconify" data-icon="carbon:add-filled"></span>
+								</button>
+							</div>
+							<div class="part2">
+								<button class="btn-delete-relation">
+									<span class="iconify" data-icon="ep:document-delete"></span>
+								</button>
+								<div class="dialog-confirm">
+									<header>
+										<span>¿Está seguro de eliminar todo?</span>
+									</header>
+									<footer>
+										<button class="confirm-yes">Sí</button>
+										<button class="confirm-no">No</button>
+									</footer>
+								</div>
+							</div>
+						</header>
+						<article class="container">
+						</article>
+					</section>
+					<section class="section-relation">
+						<header class="description">
+							<div class="part1">
+								<h3>Agrega la segunda relación</h3>
+								<button class="btn-add-member">
+									<span class="iconify" data-icon="carbon:add-filled"></span>
+								</button>
+							</div>
+							<div class="part2">
+								<button class="btn-delete-relation">
+									<span class="iconify" data-icon="ep:document-delete"></span>
+								</button>
+								<div class="dialog-confirm">
+									<header>
+										<span>¿Está seguro de eliminar todo?</span>
+									</header>
+									<footer>
+										<button class="confirm-yes">Sí</button>
+										<button class="confirm-no">No</button>
+									</footer>
+								</div>
+							</div>
+						</header>
+						<article class="container">
+						</article>
+					</section>
+				</article>
+				<button id="btn-raffle">
+					<span>Sortear</span>
+					<span 
+						class="iconify" 
+						data-icon="bi:arrow-down-circle-fill"></span>
+				</button>
+			</section>
+			<section class="section-content" id="section-results">
+				<section class="container">
+					<article class="content">
+						<article class="container-results" id="container-results-1">
+						</article>
+						<article class="container-results" id="container-results-2">
+						</article>
 					</article>
 				</section>
-				<section class="section-relation">
-					<header class="description">
-						<h3>Agrega la segunda relación</h3>
-						<button class="btn-add-member second">
-							<span class="iconify" data-icon="carbon:add-filled"></span>
-						</button>
-					</header>
-					<article class="container">
-						<div class="member-item second">
-							<span>Línea de tiempo</span>
-							<button class="close">x</button>
-						</div>
-					</article>
-				</section>
-			</article>
-			<button id="btn-raffle">
-				<span>Sortear</span>
-				<span 
-					class="iconify" 
-					data-icon="bi:arrow-down-circle-fill"></span>
-			</button>
+				<button id="btn-back">
+					<span class="iconify" data-icon="entypo:back"></span>
+				</button>
+			</section>
 		</main>
-		<section id="container-results">
-			<div class="member-item-relation-1-result">
-				<span>Manuel Rivera</span>
-			</div>
-			<div class="member-item-relation-2-result">
-				<span>Línea de tiempo</span>
-			</div>
-		</section>
 		<footer id="footer-main">
-			<h5>© Desarrollado por Leunknown</h5>
+			<h5>© Desarrollado por Leunknown (Manuel Rivera)</h5>
 		</footer>
 		<!-- Scripts here -->
 		<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
