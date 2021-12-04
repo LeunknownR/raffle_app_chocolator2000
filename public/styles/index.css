@@ -262,6 +262,7 @@ main {
     margin: 0;
     font-weight: bold;
     font-size: 16px;
+    color: #A1A1A1;
 }
 .section-relation .description .part1 {
     display: flex;
