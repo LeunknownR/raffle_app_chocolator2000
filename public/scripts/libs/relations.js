@@ -18,17 +18,24 @@ const initDeleteMemberButton = ($memberItem, $sectionContainer) => {
         $sectionContainer.removeChild($memberItem.value);
     });
 }
-const initInputMemberText = $memberItem => {
+const applyNewMemberItemValue = $memberItem => {
+    if ($memberItem.inputText.value.length > 0)
+        $memberItem.spanText.innerText = $memberItem.inputText.value;
+    $memberItem.content.classList.remove('edit');
+}
+const initInputMemberText = ($memberItem, onClick) => {
     $memberItem.inputText.addEventListener('keypress', evt => {
         if (evt.key !== 'Enter') return;
-        if ($memberItem.inputText.value.length > 0)
-            $memberItem.spanText.innerText = $memberItem.inputText.value;
-        $memberItem.content.classList.remove('edit');
+        applyNewMemberItemValue($memberItem);
+        onClick();
+    });
+    $memberItem.inputText.addEventListener('blur', () => {
+        applyNewMemberItemValue($memberItem);
     });
 }
 const addMemberItem = ($sectionContainer) => {
     const $memberItem = {
-        value: templates.getMemberItem(`Elemento`),
+        value: templates.getMemberItem('Elemento'),
         content: null,
         inputText: null,
         spanText: null
@@ -40,7 +47,9 @@ const addMemberItem = ($sectionContainer) => {
     // Obteniendo referencia del span
     $memberItem.spanText = $memberItem.content.querySelector("span");
     initEditMemberButton($memberItem);
-    initInputMemberText($memberItem);
+    initInputMemberText($memberItem, () => {
+        addMemberItem($sectionContainer);
+    });
     initDeleteMemberButton($memberItem, $sectionContainer);
     // Agregando elemento miembro
     $sectionContainer.appendChild($memberItem.value);
@@ -53,7 +62,7 @@ const initAddRelation = $sectionsRelation => {
     $sectionsRelation.forEach($section => {
         const $btnAddMember = $section.querySelector('.btn-add-member');
         $btnAddMember.addEventListener('click', () => {
-            return addMemberItem($section.querySelector('.container'));
+            addMemberItem($section.querySelector('.container'));
         });
     });
 }
