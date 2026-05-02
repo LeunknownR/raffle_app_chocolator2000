@@ -1,10 +1,10 @@
 const templates = {
-    getMemberItem: (nameItem = "Elemento") => { 
+    getMemberItem: (nameItem) => { 
         const memberItem = document.createElement('article');
         memberItem.className = "member-item";
         memberItem.innerHTML = /*html*/ `
             <div class="content">
-                <span>${nameItem}</span>
+                <span></span>
                 <input type="text"/>
             </div>
             <div class="actions">

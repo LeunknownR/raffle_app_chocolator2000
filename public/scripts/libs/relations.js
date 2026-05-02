@@ -18,7 +18,7 @@ const initDeleteMemberButton = ($memberItem, $sectionContainer) => {
         $sectionContainer.removeChild($memberItem.value);
     });
 }
-const applyNewMemberItemValue = $memberItem => {
+const setNewValueToMemberItem = $memberItem => {
     if ($memberItem.inputText.value.length > 0)
         $memberItem.spanText.innerText = $memberItem.inputText.value;
     $memberItem.content.classList.remove('edit');
@@ -26,16 +26,21 @@ const applyNewMemberItemValue = $memberItem => {
 const initInputMemberText = ($memberItem, onClick) => {
     $memberItem.inputText.addEventListener('keypress', evt => {
         if (evt.key !== 'Enter') return;
-        applyNewMemberItemValue($memberItem);
-        onClick();
+        setNewValueToMemberItem($memberItem);
+        if ($memberItem.inputText.value.length > 0 && $memberItem.spanText.innerText.length > 0) 
+            onClick();
     });
     $memberItem.inputText.addEventListener('blur', () => {
-        applyNewMemberItemValue($memberItem);
+        if ($memberItem.inputText.value.length === 0 && $memberItem.spanText.innerText.length === 0) {
+            $memberItem.content.closest('.container').removeChild($memberItem.value);
+            return;
+        }
+        setNewValueToMemberItem($memberItem);
     });
 }
 const addMemberItem = ($sectionContainer) => {
     const $memberItem = {
-        value: templates.getMemberItem('Elemento'),
+        value: templates.getMemberItem(),
         content: null,
         inputText: null,
         spanText: null
